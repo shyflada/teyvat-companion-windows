@@ -30,6 +30,8 @@ if ((Get-FileHash -LiteralPath $formatsArchive -Algorithm SHA256).Hash -ne $teyv
 New-Item -ItemType Directory -Force -Path $teyvatPreview | Out-Null
 Copy-Item -LiteralPath (Join-Path $teyvatBuild 'TeyvatCompanion.exe') -Destination $teyvatPreview
 Copy-Item -LiteralPath (Join-Path $teyvatBuild 'TeyvatEvaluate.exe') -Destination $teyvatPreview
+& (Join-Path $teyvatKit 'Tools/mingw1310_64/bin/strip.exe') --strip-debug (Join-Path $teyvatPreview 'TeyvatCompanion.exe') (Join-Path $teyvatPreview 'TeyvatEvaluate.exe')
+if ($LASTEXITCODE -ne 0) { throw 'Could not remove executable debug paths.' }
 Copy-Item -LiteralPath (Join-Path $teyvatKit 'webview2\build\native\x64\WebView2Loader.dll') -Destination $teyvatPreview
 $teyvatOriginalPath = $env:PATH
 try {

@@ -29,6 +29,7 @@ $teyvatBuild = Join-Path $teyvatRoot 'work/build-opencv'
 $teyvatProfile = [Environment]::GetFolderPath('UserProfile')
 $teyvatSourcePath = $teyvatRoot.Replace('\', '/')
 $teyvatProfilePath = $teyvatProfile.Replace('\', '/')
+$teyvatToolchainPath = $teyvatKit.Replace('\', '/')
 $teyvatPathFlags = '-ffile-prefix-map="{0}"=. -ffile-prefix-map="{1}"=.' -f $teyvatProfilePath,$teyvatSourcePath
 & cmake -S (Join-Path $teyvatSourceRoot 'opencv-4.12.0') -B $teyvatBuild -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_CXX_COMPILER=$teyvatCompiler" "-DCMAKE_C_COMPILER=$teyvatCCompiler" "-DCMAKE_CXX_FLAGS=$teyvatPathFlags" "-DCMAKE_C_FLAGS=$teyvatPathFlags" "-DCMAKE_INSTALL_PREFIX=$teyvatInstall" '-DBUILD_LIST=core,imgproc,features2d,calib3d' -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_opencv_apps=OFF -DBUILD_JAVA=OFF -DBUILD_opencv_python2=OFF -DBUILD_opencv_python3=OFF -DBUILD_PROTOBUF=OFF -DWITH_FFMPEG=OFF -DWITH_GSTREAMER=OFF -DWITH_IPP=OFF -DWITH_TBB=OFF -DWITH_OPENCL=OFF -DWITH_ITT=OFF -DWITH_LAPACK=OFF -DWITH_EIGEN=OFF -DWITH_CUDA=OFF -DWITH_OPENEXR=OFF -DWITH_OPENJPEG=OFF -DWITH_JPEG=OFF -DWITH_PNG=OFF -DWITH_TIFF=OFF -DWITH_WEBP=OFF -DWITH_JASPER=OFF -DWITH_AVIF=OFF -DWITH_GDCM=OFF -DBUILD_ZLIB=ON -DOPENCV_ENABLE_NONFREE=OFF -DCPU_BASELINE=SSE2 '-DCPU_DISPATCH=' *> (Join-Path $teyvatRoot 'work/opencv-configure.log')
 if ($LASTEXITCODE -ne 0) { Get-Content (Join-Path $teyvatRoot 'work/opencv-configure.log') -Tail 40; throw 'Minimal OpenCV configure failed.' }
@@ -36,7 +37,8 @@ foreach ($generated in @('version_string.tmp','modules/core/version_string.inc',
     $path = Join-Path $teyvatBuild $generated
     if (!(Test-Path -LiteralPath $path)) { continue }
     $contents = Get-Content -LiteralPath $path -Raw
-    foreach ($prefix in @($teyvatSourcePath,$teyvatProfilePath,$teyvatRoot.Replace('\','\\'),$teyvatProfile.Replace('\','\\'))) {
+    foreach ($prefix in @($teyvatSourcePath,$teyvatToolchainPath,$teyvatProfilePath,$teyvatRoot.Replace('\','\\'),
+            $teyvatKit.Replace('\','\\'),$teyvatProfile.Replace('\','\\'))) {
         $contents = $contents.Replace($prefix, '.', [StringComparison]::OrdinalIgnoreCase)
     }
     Set-Content -LiteralPath $path -Value $contents -NoNewline -Encoding utf8
