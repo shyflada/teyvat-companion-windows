@@ -1,0 +1,51 @@
+{
+  "qt_version": "6.11.3",
+  "compiler": "MinGW-w64 GCC 13.1.0, x64, POSIX, SEH, MSVCRT",
+  "webview2_sdk": {
+    "version": "1.0.4314.35",
+    "url": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4314.35/microsoft.web.webview2.1.0.4314.35.nupkg",
+    "filename": "webview2.1.0.4314.35.nupkg",
+    "sha256": "90778deb1b77e36292828b4b5833c9255c27533f40e0ddd55891ae718944edc4",
+    "runtime": "Microsoft Edge WebView2 Evergreen Runtime; uses the official website's own browser session"
+  },
+  "qtbase_source": {
+    "url": "https://download.qt.io/official_releases/qt/6.11/6.11.3/submodules/qtbase-everywhere-src-6.11.3.tar.xz",
+    "filename": "qtbase-everywhere-src-6.11.3.tar.xz",
+    "sha256": "46de0710b594945a5d446ae44354daa386141c6903c53781b2ca547bc62f8f8f"
+  },
+  "qtimageformats_source": {
+    "url": "https://download.qt.io/official_releases/qt/6.11/6.11.3/submodules/qtimageformats-everywhere-src-6.11.3.tar.xz",
+    "filename": "qtimageformats-everywhere-src-6.11.3.tar.xz",
+    "sha256": "2759929c7abbc5376120394d1ccac1abbb816bc2791b34ece6c1412d323e6213"
+  },
+  "opencv_source": {
+    "version": "4.12.0",
+    "url": "https://github.com/opencv/opencv/archive/refs/tags/4.12.0.tar.gz",
+    "filename": "opencv-4.12.0.tar.gz",
+    "sha256": "44c106d5bb47efec04e531fd93008b3fcd1d27138985c5baf4eafac0e1ec9e9d",
+    "modules": ["core", "imgproc", "features2d", "calib3d", "flann"],
+    "linkage": "static; same GCC 13.1.0 as Qt; nonfree disabled"
+  },
+  "packages": [
+    {
+      "name": "qtbase",
+      "url": "https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6113/qt6_6113_mingw/qt.qt6.6113.win64_mingw/6.11.3-0-202610220312qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z",
+      "sha256": "643531b7858fd8e0b4cd1ffe65bd5c134c4f6d246803c80a09c80e28796a6c83"
+    },
+    {
+      "name": "qtimageformats",
+      "url": "https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6113/qt6_6113_mingw/qt.qt6.6113.addons.qtimageformats.win64_mingw/6.11.3-0-202610220312qtimageformats-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z",
+      "sha256": "ebc917b671acb4850bb794f6519f979dbf5d86ed71fb5806a95ec267f6775329"
+    },
+    {
+      "name": "qttools",
+      "url": "https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6113/qt6_6113_mingw/qt.qt6.6113.win64_mingw/6.11.3-0-202610220312qttools-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z",
+      "sha256": "3298a02a2e58172e3ea2dd29f5ca326076d0a2b72140896ff5ea357ee8cb65e4"
+    },
+    {
+      "name": "mingw",
+      "url": "https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/tools_mingw1310/qt.tools.win64_mingw1310/13.1.0-202407240918mingw1310.7z",
+      "sha256": "a7b502294a903b64fccd4a41ba39f48d3f6c9a5ece167f0cfaeac920d15b344f"
+    }
+  ]
+}

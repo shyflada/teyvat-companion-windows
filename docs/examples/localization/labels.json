@@ -1,0 +1,88 @@
+{
+    "event_tolerance_ms": 150,
+    "format": "teyvat-evaluation-labels",
+    "openings": [
+        {
+            "marker_id": "demo-chest-a",
+            "time_ms": 300
+        },
+        {
+            "marker_id": "demo-chest-b",
+            "time_ms": 800
+        }
+    ],
+    "position_tolerance": 2,
+    "positions": [
+        {
+            "position": {
+                "x": 100,
+                "y": 120
+            },
+            "time_ms": 0
+        },
+        {
+            "position": {
+                "x": 100,
+                "y": 120
+            },
+            "time_ms": 100
+        },
+        {
+            "position": {
+                "x": 100,
+                "y": 120
+            },
+            "time_ms": 200
+        },
+        {
+            "position": {
+                "x": 100,
+                "y": 120
+            },
+            "time_ms": 300
+        },
+        {
+            "position": {
+                "x": 100,
+                "y": 120
+            },
+            "time_ms": 400
+        },
+        {
+            "position": {
+                "x": 230,
+                "y": 140
+            },
+            "time_ms": 500
+        },
+        {
+            "position": {
+                "x": 230,
+                "y": 140
+            },
+            "time_ms": 600
+        },
+        {
+            "position": {
+                "x": 230,
+                "y": 140
+            },
+            "time_ms": 700
+        },
+        {
+            "position": {
+                "x": 230,
+                "y": 140
+            },
+            "time_ms": 800
+        },
+        {
+            "position": {
+                "x": 230,
+                "y": 140
+            },
+            "time_ms": 900
+        }
+    ],
+    "version": 1
+}

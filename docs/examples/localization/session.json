@@ -1,0 +1,23 @@
+{
+  "format": "teyvat-tracking-session",
+  "version": 1,
+  "synthetic": true,
+  "dataset": "map.json",
+  "provenance": "Original synthetic test world; not game geography or chest locations",
+  "license": "MIT; original project data",
+  "capture_size": {"width": 240, "height": 128},
+  "match_radius": 16,
+  "localization": {
+    "reference": "reference.png",
+    "roi": {"x": 144, "y": 24, "width": 65, "height": 65},
+    "origin": {"x": 0, "y": 0},
+    "units_per_pixel": {"x": 1, "y": 1},
+    "scales": [1, 1.5],
+    "rotations": [0, 45, 90, 180]
+  },
+  "opening": {
+    "roi": {"x": 32, "y": 16, "width": 64, "height": 64},
+    "closed_template": "closed.png",
+    "opened_template": "opened.png"
+  }
+}

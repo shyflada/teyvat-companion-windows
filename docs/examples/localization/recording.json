@@ -1,0 +1,92 @@
+{
+    "closed_template": "closed.png",
+    "format": "teyvat-offline-recording",
+    "frames": [
+        {
+            "image": "frame-000.png",
+            "time_ms": 0
+        },
+        {
+            "image": "frame-001.png",
+            "time_ms": 100
+        },
+        {
+            "image": "frame-002.png",
+            "time_ms": 200
+        },
+        {
+            "image": "frame-003.png",
+            "time_ms": 300
+        },
+        {
+            "image": "frame-004.png",
+            "time_ms": 400
+        },
+        {
+            "image": "frame-005.png",
+            "time_ms": 500
+        },
+        {
+            "image": "frame-006.png",
+            "time_ms": 600
+        },
+        {
+            "image": "frame-007.png",
+            "time_ms": 700
+        },
+        {
+            "image": "frame-008.png",
+            "time_ms": 800
+        },
+        {
+            "image": "frame-009.png",
+            "time_ms": 900
+        }
+    ],
+    "license": "MIT",
+    "localization": {
+        "license": "MIT",
+        "origin": {
+            "x": 0,
+            "y": 0
+        },
+        "provenance": "Original synthetic terrain, not a game map",
+        "reference": "reference.png",
+        "roi": {
+            "height": 65,
+            "width": 65,
+            "x": 144,
+            "y": 24
+        },
+        "rotations": [
+            0,
+            45,
+            90,
+            180
+        ],
+        "scales": [
+            1,
+            1.5
+        ],
+        "units_per_pixel": {
+            "x": 1,
+            "y": 1
+        }
+    },
+    "map": {
+        "frame": "synthetic-localization-v1",
+        "layer": "surface",
+        "region": "test-grid",
+        "source": "tc-localization-demo"
+    },
+    "match_radius": 12,
+    "opened_template": "opened.png",
+    "provenance": "Original synthetic fixture; no game capture or assets",
+    "roi": {
+        "height": 64,
+        "width": 64,
+        "x": 32,
+        "y": 16
+    },
+    "version": 2
+}

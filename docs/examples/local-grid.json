@@ -1,0 +1,18 @@
+{
+  "format": "teyvat-companion",
+  "version": 1,
+  "maps": [{
+    "source": "example-owned", "region": "Example region", "layer": "Surface",
+    "title": "Synthetic coordinate example — not game geography",
+    "frame": "example-owned:local-units-v1", "width": 1000, "height": 1000,
+    "provenance": "Original synthetic example authored for this project",
+    "license": "MIT; example data only", "data_version": "v1"
+  }],
+  "markers": [{
+    "source": "example-owned", "region": "Example region", "layer": "Surface",
+    "id": "example-001", "category": "common",
+    "label": "Example marker — not a real chest location",
+    "notes": "Replace this example with your own permitted data.",
+    "x": 120, "y": 340, "status": "not_collected", "retired": false, "origin": "manual"
+  }]
+}
